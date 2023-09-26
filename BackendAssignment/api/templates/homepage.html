@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Overview</title>
+  </head>
+  <body>
+    <h1>Users Overview</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Post Count</th>
+          <th>Followers Count</th>
+          <th>Following Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user_data in users_data %}
+        <tr>
+          <td>{{ user_data.username }}</td>
+          <td>{{ user_data.post_count }}</td>
+          <td>{{ user_data.followers_count }}</td>
+          <td>{{ user_data.following_count }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
